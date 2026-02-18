@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Grace Architects PLLC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Modern system sans-serif stack -->
+
     <style>
         :root {
             --text: #111;
-            --muted: #666;
+            --muted: #777;
+            --max-width: 1000px;
         }
 
         * {
@@ -19,44 +19,45 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                          Helvetica, Arial, sans-serif;
-            color: var(--text);
             background: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        .container {
+        /* NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 1.25rem 2rem;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 1.5rem;
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
         }
 
         .logo {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
+            height: 40px;
+            width: auto;
         }
 
-        .links {
+        nav {
             display: flex;
             gap: 2rem;
         }
 
-        .links a {
+        nav a {
             text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
             color: var(--text);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
             position: relative;
         }
 
-        .links a::after {
+        nav a::after {
             content: "";
             position: absolute;
             left: 0;
@@ -69,32 +70,96 @@
             transition: transform 0.2s ease;
         }
 
-        .links a:hover::after {
+        nav a:hover::after {
             transform: scaleX(1);
         }
 
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.75rem;
+        /* MAIN CONTENT */
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 6rem 2rem;
+        }
+
+        .content {
+            max-width: var(--max-width);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            max-width: 700px;
+            font-size: 1rem;
             color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border-top: 1px solid #eee;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                gap: 1.25rem;
+            }
+
+            main {
+                padding: 4rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Replace logo.png with your actual image filename -->
-         
-       <!-- <img src="images/orange-inset-detail.jpg" alt="Envelope Repair" class="image"> -->
+    <header>
+        <!-- Replace logo.png with your actual file -->
         <img src="images/grace_study3-3.png" alt="Grace Architects PLLC" class="logo">
-       <br>
-        <div class="links">
+
+        <nav>
+            <a href="/index.html">About</a>
             <a href="/resume.html">Resume</a>
-            <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
+            <a href="mailto:info@gracearchitectspllc.com">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <!-- Replace hero.jpg with your actual image -->
+            <img src="hero.jpg" alt="Architectural Work" class="hero-image">
+
+            <h1>Thoughtful Architecture, Precisely Executed.</h1>
+
+            <p>
+                Grace Architects PLLC is a practice grounded in clarity, restraint, and enduring design.
+                Each project is approached with rigor and intention, balancing context, craft, and performance.
+                The result is architecture that is both quietly confident and carefully resolved.
+            </p>
         </div>
-        
-    </div>
+    </main>
 
     <footer>
         © 2026 Grace Architects PLLC
