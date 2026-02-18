@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grace Architects PLLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Modern system sans-serif stack -->
+    <style>
+        :root {
+            --text: #111;
+            --muted: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                         Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            color: var(--text);
+            position: relative;
+        }
+
+        .links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 1px;
+            background: var(--text);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+        }
+
+        .links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Replace logo.png with your actual image filename -->
+        <img src="logo.png" alt="Grace Architects PLLC" class="logo">
+
+        <div class="links">
+            <a href="/resume.html">Resume</a>
+            <a href="mailto:info@gracearchitectspllc.com">Contact</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Grace Architects PLLC
+    </footer>
+
+</body>
+</html>
