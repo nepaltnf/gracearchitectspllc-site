@@ -1,79 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Resume — Grace Architects PLLC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Resume — Grace Architects PLLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Resume-specific layout (keeps your global site styles.css intact) */
+    main { padding: 4rem 2rem; }
+    .resume {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .resume h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      letter-spacing: 0.01em;
+    }
+    .resume .kicker {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      max-width: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2.25rem;
+    }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem;
+      background: #fff;
+    }
+    .section {
+      margin-top: 2.25rem;
+    }
+    .section h2 {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+    .section h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.25rem;
+    }
+    .section p { max-width: none; }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    ul.clean {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    ul.clean li {
+      padding-left: 1.1rem;
+      position: relative;
+      margin: 0.5rem 0;
+      color: var(--muted);
+    }
+    ul.clean li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text);
+    }
+    .refs .ref {
+      padding: 0.9rem 0;
+      border-top: 1px solid #eee;
+    }
+    .refs .ref:first-child { border-top: none; padding-top: 0; }
+    .refs .name { font-weight: 600; color: var(--text); }
+    .refs .role { color: var(--muted); }
+    .refs a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+    .refs a:hover { border-bottom-color: var(--text); }
+    .story {
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+    .story:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo" />
+    <nav>
+      <a href="index.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-        <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo">
+  <main>
+    <article class="resume">
+      <h1>Ralph Allen, AIA</h1>
+      <p class="kicker">
+        Ralph has over 40 years of experience in a vast array of project types, sizes and configurations here and
+        around the world. His extensive background in leading complex teams to successful outcomes spans all major market
+        sectors including healthcare, commercial, hospitality, and residential. He approaches all of his work with a strong
+        grasp of design principles, technical insight into component performance and clear and effective communications
+        with the client and the entire project team.
+      </p>
 
-        <nav>
-            <a href="index.html">About</a>
-            <a href="resume.html">Resume</a>
-            <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
-        </nav>
-    </header>
+      <div class="grid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <section class="section">
+            <h2>Over his career, Ralph has led the design, documentation, permitting and successful completion of</h2>
+            <ul class="clean">
+              <li>1.2 million SF of commercial tenant improvement space</li>
+              <li>$300m+ worth of building envelope expert review, associated repair, and reconstruction projects on multi-family, commercial and single family structures</li>
+              <li>Multiple planning studies for hospitals, multi-family, and commercial property developments</li>
+              <li>1.4 million+ SF of highly technical hospital and health care facilities</li>
+            </ul>
+          </section>
 
-    <main>
-        <div class="content" style="text-align:left; max-width:800px;">
+          <section class="section">
+            <h2>Relevant experience</h2>
 
-            <h1>Ralph Allen</h1>
-            <p><strong>Principal Architect</strong><br>
-            Grace Architects PLLC</p>
+            <h3>Harborview Bond Issue – MIMP Revision &amp; miscellaneous project planning</h3>
+            <p>
+              Ralph led the TGB Architect’s team in finalizing the revisions to the MIMP currently in public comment.
+              He also worked on developing several associated planning studies for parking and new behavior health structures
+              within the MIO boundary and on adjacent properties.
+            </p>
 
-            <br>
+            <h3>Western State Hospital</h3>
+            <p>
+              Ralph led the planning and design of the new TRC unit being developed in the existing campus and served as project manager
+              for both an extensive anti-ligature renovation of several wards, and the current fire door replacement project.
+            </p>
 
-            <section>
-                <h2 style="font-size:1.2rem; margin-bottom:0.5rem;">Experience</h2>
+            <h3>Project HOPE, Shanghai Children’s Medical Center, Shanghai, China</h3>
+            <p>
+              Ralph led the consulting team for Project HOPE during the planning and development of the Shanghai Children’s Medical Center —
+              the first tertiary care, pediatric teaching facility built to a modern hospital standard in Asia. He was a Senior Associate at NBBJ at the time.
+            </p>
 
-                <p><strong>Grace Architects PLLC</strong><br>
-                Principal Architect<br>
-                2018 – Present</p>
+            <h3>Two Union Square, Washington Holdings, LLC, Seattle, WA | $10m | 40,000 SF</h3>
+            <p>
+              Ralph was both Project Manager and Project Architect for the full plaza replacement and re-design project at the Two Union Square property
+              in downtown Seattle. This involved a full acre of public plaza space on 3 levels all over existing occupied spaces below, and the addition of new highly refined design elements.
+            </p>
 
-                <p>
-                Lead architectural design and project oversight across residential and
-                commercial commissions. Coordinate consultants, manage permitting,
-                and oversee construction administration.
-                </p>
+            <h3>1101 Westlake – Main lobby renovations</h3>
+            <p>
+              1101 Westlake LLC, part of BioMed Realty’s portfolio, unveiled its newly renovated main lobby — a space reimagined to deliver an elegant and inviting environment
+              that sets the tone for an exceptional tenant and guest welcome. Ralph led the TGB team for this work.
+            </p>
 
-                <br>
+            <h3>Rural Health Care Clinic: Surmang Foundation, Tibet | 5,000 SF</h3>
+            <p>
+              Ralph is a board member for the Surmang Foundation which provides critical patient care services to a remote indigenous population in a high valley in Tibet.
+              He is currently designing a new rural health care clinic for this group. In the 30+ years of its existence the Surmang foundation has affected the reduction
+              of mother and infant mortality from a 70+% level to 0%.
+            </p>
+          </section>
 
-                <p><strong>Previous Firm Name</strong><br>
-                Project Architect<br>
-                2012 – 2018</p>
+          <section class="section">
+            <h2>A few project stories</h2>
 
-                <p>
-                Managed project documentation, consultant coordination, and client
-                communications across multi-phase architectural projects.
-                </p>
-            </section>
+            <div class="story">
+              <p>
+                <strong>1.</strong> The 9th&amp;Alder Behavior Health Tower is a concept solution designed to maximize the available envelope on this site while satisfying the BH program
+                as well as additional Harborview hospital functions. A functional and attractive architectural concept arose allowing for a large south facing roof deck available to patient
+                and staff alike. Ralph managed the building core planning and developed the Revit modelling for this project while at TGB Architects.
+              </p>
+            </div>
 
-            <br>
+            <div class="story">
+              <p>
+                <strong>2.</strong> The initial designs for the TRC unit at the Western State Hospital leveraged the corridor transition points to emphasize both staff connectivity to the patient
+                population at one end, and a point of arrival at a patient centered amenity at the other end. The detail plan shown is the latter and represents a level of development in support
+                a quality patient experience. This particular element is being re-considered in a VE effort for the project. Ralph is the lead planner / designer for this work.
+              </p>
+            </div>
 
-            <section>
-                <h2 style="font-size:1.2rem; margin-bottom:0.5rem;">Education</h2>
+            <div class="story">
+              <p>
+                <strong>3.</strong> The Shanghai Children’s medical center began as a 250 bed greenfield hospital, with a fully modern surgical suite, diagnostic modalities and building MEPC systems.
+                It was the first of its kind in Asia and has since grown considerably over the decades hence. Ralph led the NBBJ consulting team supporting Project HOPE in working with one of the
+                largest AE firms in China on what was one of the top 5 important projects for the Central Government. The project was completed in under 3 years.
+              </p>
+            </div>
 
-                <p><strong>University Name</strong><br>
-                Bachelor of Architecture</p>
-            </section>
+            <div class="story">
+              <p>
+                <strong>4.</strong> The public plaza waterproofing project at Two Union Square covered a one acre plaza on multiple levels. With the owner’s inspired guidance new stairways, paving patterns
+                and covered area canopies were added to enhance the tenant and public experience of this landmark public space in downtown Seattle. Ralph led the planning and design of this project while at Evolution Architecture.
+              </p>
+            </div>
 
-            <br>
+            <div class="story">
+              <p>
+                <strong>5.</strong> Sometimes we have the chance to execute a small project to a very high level of design aspiration and detail. The Lobby renovation at 1101 Westlake is one of these.
+                With an inspired and insightful owner leading the dialog, the TGB / Turner team accomplished a truly unique and standout finished space.
+              </p>
+            </div>
 
-            <section>
-                <h2 style="font-size:1.2rem; margin-bottom:0.5rem;">Licensure</h2>
-                <p>Registered Architect — State of [State]</p>
-            </section>
-
+            <div class="story">
+              <p>
+                <strong>6.</strong> The Surmang Foundation is a passion project of mine for many years. The new clinic design is scaled back from previous full campus versions to a 2 exam room facility to support the two Tibetan doctors on staff.
+                Care is always completely free, and the clinic, serving a large catchment area of small rural villages, sees over 20,000 patient visits annually. We are currently fund raising for both the new clinic and ongoing operational funding.
+              </p>
+            </div>
+          </section>
         </div>
-    </main>
 
-    <footer>
-        © 2026 Grace Architects PLLC
-    </footer>
+        <!-- RIGHT COLUMN -->
+        <aside>
+          <section class="card section" style="margin-top: 0;">
+            <h2>Education</h2>
+            <p style="color: var(--muted); margin: 0;">Evergreen State College</p>
+          </section>
 
+          <section class="card section">
+            <h2>Registrations</h2>
+            <p style="color: var(--muted); margin: 0;">Registered Architect: WA #4435</p>
+          </section>
+
+          <section class="card section refs">
+            <h2>References</h2>
+
+            <div class="ref">
+              <div class="name">Kent Gregory</div>
+              <div class="role">Principal, TGB</div>
+              <div class="meta">
+                <a href="mailto:kgregory@tgbarchitects.com">kgregory@tgbarchitects.com</a>
+                <span>425.599.4469</span>
+              </div>
+            </div>
+
+            <div class="ref">
+              <div class="name">Erica Pabis</div>
+              <div class="role">Project Manager, VANIR</div>
+              <div class="meta">
+                <a href="mailto:Erica.Pabis@vanir.com">Erica.Pabis@vanir.com</a>
+                <span>425.328.0279</span>
+              </div>
+            </div>
+
+            <div class="ref">
+              <div class="name">Adrian Hinojos</div>
+              <div class="role">DSHS Construction Project Coordinator-3</div>
+              <div class="meta">
+                <a href="mailto:adrian.hinojos2@dshs.wa.gov">adrian.hinojos2@dshs.wa.gov</a>
+                <span>253.761.7626</span>
+              </div>
+            </div>
+
+            <div class="ref">
+              <div class="name">Brad Rock</div>
+              <div class="role">Sr. Director, Development – Bio-med Realty</div>
+              <div class="meta">
+                <a href="mailto:Brad.Rock@biomedrealty.com">Brad.Rock@biomedrealty.com</a>
+                <span>206.437.6059</span>
+              </div>
+            </div>
+
+            <div class="ref">
+              <div class="name">Aaron Blankers</div>
+              <div class="meta">
+                <a href="mailto:ablankers@waholdings.com">ablankers@waholdings.com</a>
+                <span>206.613.5331</span>
+              </div>
+            </div>
+
+            <div class="ref">
+              <div class="name">Joshua Sykes</div>
+              <div class="meta">
+                <a href="mailto:joshuasykes@abbotconstruction.com">joshuasykes@abbotconstruction.com</a>
+                <span>206.963.6104</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Grace Architects PLLC
+  </footer>
 </body>
 </html>
