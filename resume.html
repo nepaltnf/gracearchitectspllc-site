@@ -7,24 +7,28 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Resume-specific layout (keeps your global site styles.css intact) */
+    /* Resume-specific layout (keeps your global styles.css intact) */
     main { padding: 4rem 2rem; }
+
     .resume {
       width: 100%;
       max-width: 980px;
       margin: 0 auto;
       text-align: left;
     }
+
     .resume h1 {
       margin: 0;
       font-size: 2.25rem;
       letter-spacing: 0.01em;
     }
+
     .resume .kicker {
       margin-top: 0.5rem;
       color: var(--muted);
       max-width: none;
     }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr 320px;
@@ -32,15 +36,22 @@
       align-items: start;
       margin-top: 2.25rem;
     }
+
+    .full-span {
+      grid-column: 1 / -1;
+    }
+
     .card {
       border: 1px solid #eee;
       border-radius: 12px;
       padding: 1.25rem 1.25rem;
       background: #fff;
     }
+
     .section {
       margin-top: 2.25rem;
     }
+
     .section h2 {
       font-size: 0.95rem;
       letter-spacing: 0.12em;
@@ -48,12 +59,15 @@
       font-weight: 600;
       margin-bottom: 0.9rem;
     }
+
     .section h3 {
       font-size: 1.05rem;
       font-weight: 600;
       margin: 1.25rem 0 0.25rem;
     }
+
     .section p { max-width: none; }
+
     .meta {
       display: flex;
       flex-wrap: wrap;
@@ -61,78 +75,82 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
+
     ul.clean {
       list-style: none;
       padding-left: 0;
       margin: 0;
     }
+
     ul.clean li {
       padding-left: 1.1rem;
       position: relative;
       margin: 0.5rem 0;
       color: var(--muted);
     }
+
     ul.clean li::before {
       content: "•";
       position: absolute;
       left: 0;
       color: var(--text);
     }
+
     .refs .ref {
       padding: 0.9rem 0;
       border-top: 1px solid #eee;
     }
+
     .refs .ref:first-child { border-top: none; padding-top: 0; }
+
     .refs .name { font-weight: 600; color: var(--text); }
     .refs .role { color: var(--muted); }
-    .refs a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
-    .refs a:hover { border-bottom-color: var(--text); }
-    .story {
-      border-top: 1px solid #eee;
-      padding-top: 1rem;
-      margin-top: 1rem;
+
+    .refs a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
     }
-    .story:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+    .refs a:hover { border-bottom-color: var(--text); }
+
+    /* Story layout: text left + image right */
+    .story { padding: 0.9rem 0; border-top: 1px solid #eee; }
+    .story:first-of-type { border-top: none; padding-top: 0; }
+
+    .story-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .story-table td {
+      vertical-align: top;
+    }
+
+    .story-text {
+      padding-right: 1.5rem;
+    }
+
+    .story-media {
+      width: 320px; /* aligns with sidebar width */
+    }
+
+    .story-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #eee;
+      border-radius: 10px;
+    }
 
     @media (max-width: 980px) {
       .grid { grid-template-columns: 1fr; }
+      .story-table, .story-table tbody, .story-table tr, .story-table td {
+        display: block;
+        width: 100%;
+      }
+      .story-text { padding-right: 0; }
+      .story-media { width: 100%; margin-top: 1rem; }
     }
-    .story-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.story-table td {
-  vertical-align: top;
-}
-
-.story-text {
-  padding-right: 1.5rem;
-}
-
-.story-media {
-  width: 320px;
-}
-
-.story-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #eee;
-  border-radius: 10px;
-}
-
-@media (max-width: 980px) {
-  .story-table, .story-table tbody, .story-table tr, .story-table td {
-    display: block;
-    width: 100%;
-  }
-  .story-text { padding-right: 0; }
-  .story-media { width: 100%; margin-top: 1rem; }
-}
-    .full-span {
-  grid-column: 1 / -1;
-}
   </style>
 </head>
 
@@ -211,110 +229,6 @@
               of mother and infant mortality from a 70+% level to 0%.
             </p>
           </section>
-
-        <section class="section full-span">
-  <h2>A few project stories</h2>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>1.</strong> The 9th&amp;Alder Behavior Health Tower is a concept solution designed to maximize the available envelope on this site while satisfying the BH program
-            as well as additional Harborview hospital functions. A functional and attractive architectural concept arose allowing for a large south facing roof deck available to patient
-            and staff alike. Ralph managed the building core planning and developed the Revit modelling for this project while at TGB Architects.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-1.png" alt="9th & Alder Behavior Health Tower concept rendering">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>2.</strong> The initial designs for the TRC unit at the Western State Hospital leveraged the corridor transition points to emphasize both staff connectivity to the patient
-            population at one end, and a point of arrival at a patient centered amenity at the other end. The detail plan shown is the latter and represents a level of development in support
-            a quality patient experience. This particular element is being re-considered in a VE effort for the project. Ralph is the lead planner / designer for this work.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-2.png" alt="Western State Hospital TRC unit detail plan">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>3.</strong> The Shanghai Children’s medical center began as a 250 bed greenfield hospital, with a fully modern surgical suite, diagnostic modalities and building MEPC systems.
-            It was the first of its kind in Asia and has since grown considerably over the decades hence. Ralph led the NBBJ consulting team supporting Project HOPE in working with one of the
-            largest AE firms in China on what was one of the top 5 important projects for the Central Government. The project was completed in under 3 years.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-3.png" alt="Shanghai Children's Medical Center exterior">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>4.</strong> The public plaza waterproofing project at Two Union Square covered a one acre plaza on multiple levels. With the owner’s inspired guidance new stairways, paving patterns
-            and covered area canopies were added to enhance the tenant and public experience of this landmark public space in downtown Seattle. Ralph led the planning and design of this project while at Evolution Architecture.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-4.png" alt="Two Union Square plaza renovation">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>5.</strong> Sometimes we have the chance to execute a small project to a very high level of design aspiration and detail. The Lobby renovation at 1101 Westlake is one of these.
-            With an inspired and insightful owner leading the dialog, the TGB / Turner team accomplished a truly unique and standout finished space.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-5.png" alt="1101 Westlake lobby renovation">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="story">
-    <table class="story-table">
-      <tr>
-        <td class="story-text">
-          <p>
-            <strong>6.</strong> The Surmang Foundation is a passion project of mine for many years. The new clinic design is scaled back from previous full campus versions to a 2 exam room facility to support the two Tibetan doctors on staff.
-            Care is always completely free, and the clinic, serving a large catchment area of small rural villages, sees over 20,000 patient visits annually. We are currently fund raising for both the new clinic and ongoing operational funding.
-          </p>
-        </td>
-        <td class="story-media">
-          <img src="images/story-6.png" alt="Surmang Foundation rural clinic design">
-        </td>
-      </tr>
-    </table>
-  </div>
-
-</section>
         </div>
 
         <!-- RIGHT COLUMN -->
@@ -385,6 +299,110 @@
             </div>
           </section>
         </aside>
+
+        <!-- FULL-WIDTH STORIES (spans under BOTH columns) -->
+        <section class="section full-span">
+          <h2>A few project stories</h2>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>1.</strong> The 9th&amp;Alder Behavior Health Tower is a concept solution designed to maximize the available envelope on this site while satisfying the BH program
+                    as well as additional Harborview hospital functions. A functional and attractive architectural concept arose allowing for a large south facing roof deck available to patient
+                    and staff alike. Ralph managed the building core planning and developed the Revit modelling for this project while at TGB Architects.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-1.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>2.</strong> The initial designs for the TRC unit at the Western State Hospital leveraged the corridor transition points to emphasize both staff connectivity to the patient
+                    population at one end, and a point of arrival at a patient centered amenity at the other end. The detail plan shown is the latter and represents a level of development in support
+                    a quality patient experience. This particular element is being re-considered in a VE effort for the project. Ralph is the lead planner / designer for this work.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-2.png" alt="Western State Hospital TRC unit detail plan" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>3.</strong> The Shanghai Children’s medical center began as a 250 bed greenfield hospital, with a fully modern surgical suite, diagnostic modalities and building MEPC systems.
+                    It was the first of its kind in Asia and has since grown considerably over the decades hence. Ralph led the NBBJ consulting team supporting Project HOPE in working with one of the
+                    largest AE firms in China on what was one of the top 5 important projects for the Central Government. The project was completed in under 3 years.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-3.png" alt="Shanghai Children’s Medical Center exterior" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>4.</strong> The public plaza waterproofing project at Two Union Square covered a one acre plaza on multiple levels. With the owner’s inspired guidance new stairways, paving patterns
+                    and covered area canopies were added to enhance the tenant and public experience of this landmark public space in downtown Seattle. Ralph led the planning and design of this project while at Evolution Architecture.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-4.png" alt="Two Union Square plaza renovation" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>5.</strong> Sometimes we have the chance to execute a small project to a very high level of design aspiration and detail. The Lobby renovation at 1101 Westlake is one of these.
+                    With an inspired and insightful owner leading the dialog, the TGB / Turner team accomplished a truly unique and standout finished space.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-5.png" alt="1101 Westlake lobby renovation" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="story">
+            <table class="story-table">
+              <tr>
+                <td class="story-text">
+                  <p>
+                    <strong>6.</strong> The Surmang Foundation is a passion project of mine for many years. The new clinic design is scaled back from previous full campus versions to a 2 exam room facility to support the two Tibetan doctors on staff.
+                    Care is always completely free, and the clinic, serving a large catchment area of small rural villages, sees over 20,000 patient visits annually. We are currently fund raising for both the new clinic and ongoing operational funding.
+                  </p>
+                </td>
+                <td class="story-media">
+                  <img src="images/story-6.png" alt="Surmang Foundation rural clinic design" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
       </div>
     </article>
   </main>
