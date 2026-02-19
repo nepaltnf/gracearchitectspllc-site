@@ -174,7 +174,7 @@ footer {
 
 .carousel-slide {
   flex: 0 0 1040px; /* slide width */
-  opacity: 0.2;
+  opacity: 0.1;
   transition: opacity 220ms ease, transform 220ms ease;
 }
 
