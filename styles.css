@@ -145,7 +145,7 @@ footer {
 /* Carousel */
 .carousel {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
   position: relative;
 
   /* left button | viewport | right button */
@@ -206,8 +206,8 @@ footer {
 
 .carousel-btn:hover { border-color: #ddd; }
 
-@media (max-width: 900px) {
-  .carousel-slide { flex-basis: 78vw; }
+@media (max-width: 1100px) {
+  .carousel-slide { flex-basis: 90vw; }
 }
 
 @media (max-width: 520px) {
