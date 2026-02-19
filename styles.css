@@ -87,7 +87,7 @@ nav a:hover::after {
 main {
   display: flex;
   justify-content: center;
-  padding: 6rem 2rem;
+  padding: 2.5rem 2rem 6rem;
   flex: 1;
 }
 
