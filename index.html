@@ -29,11 +29,10 @@
 
         <div class="carousel-viewport">
           <div class="carousel-track">
-            <!-- Replace these with your real images (add/remove slides freely) -->
-            <div class="carousel-slide"><img src="images/Street-view.png" alt="Project image 1"></div>
-            <div class="carousel-slide"><img src="images/Interior-view.png" alt="Project image 2"></div>
-            <div class="carousel-slide"><img src="images/Roof-view.png" alt="Project image 3"></div>
-            <div class="carousel-slide"><img src="images/Aerial-view.png" alt="Project image 4"></div>
+            <div class="carousel-slide"><img src="images/Street-view.png" alt="Street view"></div>
+            <div class="carousel-slide"><img src="images/Interior-view.png" alt="Interior view"></div>
+            <div class="carousel-slide"><img src="images/Roof-view.png" alt="Roof view"></div>
+            <div class="carousel-slide"><img src="images/Aerial-view.png" alt="Aerial view"></div>
           </div>
         </div>
 
@@ -59,34 +58,26 @@
       const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
       const prevBtn = carousel.querySelector(".carousel-btn.prev");
       const nextBtn = carousel.querySelector(".carousel-btn.next");
+      const viewport = carousel.querySelector(".carousel-viewport");
 
       let index = 0;
 
-      function clamp(i) {
-        const n = slides.length;
-        return (i % n + n) % n;
-      }
+      const clamp = (i) => (i % slides.length + slides.length) % slides.length;
 
       function update() {
-        const n = slides.length;
-        if (!n) return;
+        if (!slides.length) return;
 
         index = clamp(index);
 
-        // center slide is "index". Adjacent slides fade to 40%.
         slides.forEach((s, i) => {
-          s.classList.remove("is-center", "is-adjacent");
-          if (i === index) s.classList.add("is-center");
-          if (i === clamp(index - 1) || i === clamp(index + 1)) s.classList.add("is-adjacent");
+          s.classList.toggle("is-center", i === index);
+          s.classList.toggle("is-adjacent", i === clamp(index - 1) || i === clamp(index + 1));
         });
 
-        // Translate so the active slide is centered
         const slideW = slides[0].getBoundingClientRect().width;
-        const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0") || 0;
+        const gap = parseFloat(getComputedStyle(track).gap || "0") || 0;
         const offset = (slideW + gap) * index;
 
-        // Centering formula: move track left by offset, then add half viewport minus half slide
-        const viewport = carousel.querySelector(".carousel-viewport");
         const viewportW = viewport.getBoundingClientRect().width;
         const centerAdjust = (viewportW / 2) - (slideW / 2);
 
@@ -96,14 +87,11 @@
       prevBtn.addEventListener("click", () => { index -= 1; update(); });
       nextBtn.addEventListener("click", () => { index += 1; update(); });
 
-      // Keyboard support
+      carousel.tabIndex = 0;
       carousel.addEventListener("keydown", (e) => {
         if (e.key === "ArrowLeft") { index -= 1; update(); }
         if (e.key === "ArrowRight") { index += 1; update(); }
       });
-
-      // Make carousel focusable for keyboard arrows
-      carousel.tabIndex = 0;
 
       window.addEventListener("resize", update);
       update();
