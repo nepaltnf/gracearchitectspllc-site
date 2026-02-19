@@ -62,8 +62,9 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   position: relative;
+  text-transform: none;
 }
 
 nav a::after {
