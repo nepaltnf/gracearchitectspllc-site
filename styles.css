@@ -111,6 +111,14 @@ main {
   border-radius: 0px;
 }
 
+.subhead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 850px;
+  color: var(--text);
+}
+
 h1 {
   font-size: 2.2rem;
   font-weight: 500;
