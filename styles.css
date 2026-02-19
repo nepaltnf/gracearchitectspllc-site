@@ -41,9 +41,10 @@ header a {
 }
 
 .logo {
-  height: 110px;
+  height: var(--logo-height, 110px);
   width: auto;
   display: block;
+  transition: height 0.3s ease;
 }
 
 nav {
@@ -149,3 +150,8 @@ footer {
 
   nav { gap: 1.25rem; }
 }
+
+.logo-sm { --logo-height: 80px; }
+.logo-md { --logo-height: 110px; }
+.logo-lg { --logo-height: 140px; }
+.logo-xl { --logo-height: 170px; }
