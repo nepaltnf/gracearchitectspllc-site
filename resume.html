@@ -1,3 +1,4 @@
+<!-- resume.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Resume-specific layout (keeps your global styles.css intact) */
+    /* Resume-specific layout (keeps global styles.css intact) */
     main { padding: 4rem 2rem; }
 
     .resume {
@@ -21,6 +22,7 @@
       margin: 0;
       font-size: 2.25rem;
       letter-spacing: 0.01em;
+      color: var(--text);
     }
 
     .resume .kicker {
@@ -37,20 +39,16 @@
       margin-top: 2.25rem;
     }
 
-    .full-span {
-      grid-column: 1 / -1;
-    }
+    .full-span { grid-column: 1 / -1; }
 
     .card {
       border: 1px solid #eee;
       border-radius: 12px;
-      padding: 1.25rem 1.25rem;
+      padding: 1.25rem;
       background: #fff;
     }
 
-    .section {
-      margin-top: 2.25rem;
-    }
+    .section { margin-top: 2.25rem; }
 
     .section h2 {
       font-size: 0.95rem;
@@ -58,12 +56,14 @@
       text-transform: uppercase;
       font-weight: 600;
       margin-bottom: 0.9rem;
+      color: var(--text);
     }
 
     .section h3 {
       font-size: 1.05rem;
       font-weight: 600;
       margin: 1.25rem 0 0.25rem;
+      color: var(--text);
     }
 
     .section p { max-width: none; }
@@ -100,7 +100,6 @@
       padding: 0.9rem 0;
       border-top: 1px solid #eee;
     }
-
     .refs .ref:first-child { border-top: none; padding-top: 0; }
 
     .refs .name { font-weight: 600; color: var(--text); }
@@ -113,27 +112,16 @@
     }
     .refs a:hover { border-bottom-color: var(--text); }
 
-    /* Story layout: text left + image right */
+    /* Stories: text left + image right */
     .story { padding: 0.9rem 0; border-top: 1px solid #eee; }
     .story:first-of-type { border-top: none; padding-top: 0; }
 
-    .story-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+    .story-table { width: 100%; border-collapse: collapse; }
+    .story-table td { vertical-align: top; }
 
-    .story-table td {
-      vertical-align: top;
-    }
+    .story-text { padding-right: 1.5rem; }
 
-    .story-text {
-      padding-right: 1.5rem;
-    }
-
-    .story-media {
-      width: 320px; /* aligns with sidebar width */
-    }
-
+    .story-media { width: 320px; } /* aligns with sidebar width */
     .story-media img {
       width: 100%;
       height: auto;
@@ -142,14 +130,58 @@
       border-radius: 10px;
     }
 
+    /* Lightbox */
+    .lightbox-image {
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+    .lightbox-image:hover { transform: scale(1.02); }
+
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.96);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      z-index: 2000;
+    }
+
+    .lightbox-overlay.active { display: flex; }
+
+    .lightbox-overlay img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2.5rem;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: #111;
+      line-height: 1;
+      user-select: none;
+    }
+
     @media (max-width: 980px) {
       .grid { grid-template-columns: 1fr; }
+
       .story-table, .story-table tbody, .story-table tr, .story-table td {
         display: block;
         width: 100%;
       }
+
       .story-text { padding-right: 0; }
       .story-media { width: 100%; margin-top: 1rem; }
+      .lightbox-overlay { padding: 1.5rem; }
+      .lightbox-close { top: 1.25rem; right: 1.25rem; }
     }
   </style>
 </head>
@@ -157,15 +189,15 @@
 <body>
   <header>
     <a href="/index.html">
-        <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo">
+      <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo">
     </a>
 
     <nav>
-        <a href="/index.html">About</a>
-        <a href="/resume.html">Resume</a>
-        <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
+      <a href="/index.html">About</a>
+      <a href="/resume.html">Resume</a>
+      <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
     </nav>
-</header>
+  </header>
 
   <main>
     <article class="resume">
@@ -303,7 +335,7 @@
           </section>
         </aside>
 
-        <!-- FULL-WIDTH STORIES (spans under BOTH columns) -->
+        <!-- FULL-WIDTH STORIES -->
         <section class="section full-span">
           <h2>A few project stories</h2>
 
@@ -318,7 +350,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-1.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" />
+                  <img src="images/story-1.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -335,7 +367,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-2.png" alt="Western State Hospital TRC unit detail plan" />
+                  <img src="images/story-2.png" alt="Western State Hospital TRC unit detail plan" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -352,7 +384,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-3.png" alt="Shanghai Children’s Medical Center exterior" />
+                  <img src="images/story-3.png" alt="Shanghai Children’s Medical Center exterior" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -368,7 +400,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-4.png" alt="Two Union Square plaza renovation" />
+                  <img src="images/story-4.png" alt="Two Union Square plaza renovation" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -384,7 +416,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-5.png" alt="1101 Westlake lobby renovation" />
+                  <img src="images/story-5.png" alt="1101 Westlake lobby renovation" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -400,7 +432,7 @@
                   </p>
                 </td>
                 <td class="story-media">
-                  <img src="images/story-6.png" alt="Surmang Foundation rural clinic design" />
+                  <img src="images/story-6.png" alt="Surmang Foundation rural clinic design" class="lightbox-image" />
                 </td>
               </tr>
             </table>
@@ -413,5 +445,46 @@
   <footer>
     © 2026 Grace Architects PLLC
   </footer>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+    <span class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</span>
+    <img src="" alt="" id="lightbox-img">
+  </div>
+
+  <script>
+    const overlay = document.getElementById("lightbox");
+    const overlayImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("lightbox-close");
+
+    function openLightbox(src, alt) {
+      overlayImg.src = src;
+      overlayImg.alt = alt || "";
+      overlay.classList.add("active");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove("active");
+      overlay.setAttribute("aria-hidden", "true");
+      overlayImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".lightbox-image").forEach(img => {
+      img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && overlay.classList.contains("active")) closeLightbox();
+    });
+  </script>
 </body>
 </html>
