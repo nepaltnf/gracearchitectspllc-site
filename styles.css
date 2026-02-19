@@ -139,3 +139,89 @@ footer {
 
   nav { gap: 1.25rem; }
 }
+
+/* Add these rules to styles.css (keep your existing styles) */
+
+.hero-image { display: none; } /* optional: remove if you no longer use hero-image */
+
+/* Carousel */
+.carousel {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.carousel:focus {
+  outline: none;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 18px;
+  transition: transform 260ms ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 520px; /* slide width */
+  opacity: 0.2;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.carousel-slide.is-adjacent {
+  opacity: 0.4;
+}
+
+.carousel-slide.is-center {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+/* Buttons */
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+  color: #111;
+  display: grid;
+  place-items: center;
+}
+
+.carousel-btn:hover {
+  border-color: #ddd;
+}
+
+@media (max-width: 900px) {
+  .carousel-slide { flex-basis: 78vw; }
+}
+
+@media (max-width: 520px) {
+  .carousel {
+    grid-template-columns: 1fr;
+  }
+  .carousel-btn {
+    display: none; /* swipe/keyboard still works */
+  }
+}
