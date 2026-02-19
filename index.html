@@ -1,101 +1,38 @@
-<!-- index.html -->
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Grace Architects PLLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+<link rel="stylesheet" href="styles.css">
 
 <body>
-  <header>
+
+    <header>
     <a href="/index.html">
-      <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo">
+        <img src="images/grace_study3-2.png" alt="Grace Architects PLLC" class="logo">
     </a>
 
     <nav>
-      <a href="/index.html">About</a>
-      <a href="/resume.html">Resume</a>
-      <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
+        <a href="/index.html">About</a>
+        <a href="/resume.html">Resume</a>
+        <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <div class="content">
-      <!-- Carousel -->
-      <section class="carousel" aria-label="Project images">
-        <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+    <main>
+        <div class="content">
+            <!-- Replace hero.jpg with your actual image -->
+            <img src="images/Street-view.png" alt="Architectural Work" class="hero-image">
 
-        <div class="carousel-viewport">
-          <div class="carousel-track">
-            <div class="carousel-slide"><img src="images/Street-view.png" alt="Street view"></div>
-            <div class="carousel-slide"><img src="images/Interior-view.png" alt="Interior view"></div>
-            <div class="carousel-slide"><img src="images/Roof-view.png" alt="Roof view"></div>
-            <div class="carousel-slide"><img src="images/Aerial-view.png" alt="Aerial view"></div>
-          </div>
+            <h1>We practice Architecture—</h1>
+
+            <p>
+               —with a clear understanding of the built environment, a deep well of practical project experience and a strong commitment to the success of your vision.
+            </p>
         </div>
+    </main>
 
-        <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
-      </section>
+    <footer>
+        © 2026 Grace Architects PLLC
+    </footer>
 
-      <h1>We practice Architecture</h1>
-
-      <p>
-        With a clear understanding of the built environment, a deep well of practical project experience and a strong commitment to the success of your vision.
-      </p>
-    </div>
-  </main>
-
-  <footer>
-    © 2026 Grace Architects PLLC
-  </footer>
-
-  <script>
-    (function () {
-      const carousel = document.querySelector(".carousel");
-      const track = carousel.querySelector(".carousel-track");
-      const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
-      const prevBtn = carousel.querySelector(".carousel-btn.prev");
-      const nextBtn = carousel.querySelector(".carousel-btn.next");
-      const viewport = carousel.querySelector(".carousel-viewport");
-
-      let index = 0;
-
-      const clamp = (i) => (i % slides.length + slides.length) % slides.length;
-
-      function update() {
-        if (!slides.length) return;
-
-        index = clamp(index);
-
-        slides.forEach((s, i) => {
-          s.classList.toggle("is-center", i === index);
-          s.classList.toggle("is-adjacent", i === clamp(index - 1) || i === clamp(index + 1));
-        });
-
-        const slideW = slides[0].getBoundingClientRect().width;
-        const gap = parseFloat(getComputedStyle(track).gap || "0") || 0;
-        const offset = (slideW + gap) * index;
-
-        const viewportW = viewport.getBoundingClientRect().width;
-        const centerAdjust = (viewportW / 2) - (slideW / 2);
-
-        track.style.transform = `translateX(${centerAdjust - offset}px)`;
-      }
-
-      prevBtn.addEventListener("click", () => { index -= 1; update(); });
-      nextBtn.addEventListener("click", () => { index += 1; update(); });
-
-      carousel.tabIndex = 0;
-      carousel.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowLeft") { index -= 1; update(); }
-        if (e.key === "ArrowRight") { index += 1; update(); }
-      });
-
-      window.addEventListener("resize", update);
-      update();
-    })();
-  </script>
 </body>
 </html>
