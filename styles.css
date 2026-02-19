@@ -108,12 +108,13 @@ p {
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 2rem;
+  height: 80px;                 /* fixed height */
+  display: flex;
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
   font-size: 0.8rem;
   color: var(--muted);
   border-top: 1px solid #eee;
-  margin-top: 4rem;
 }
 
 /* ----------------------------
