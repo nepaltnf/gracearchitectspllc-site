@@ -151,7 +151,7 @@ footer {
   nav { gap: 1.25rem; }
 }
 
-.logo-sm { --logo-height: 80px; }
-.logo-md { --logo-height: 110px; }
-.logo-lg { --logo-height: 140px; }
+.logo-sm { --logo-height: 75px; }
+.logo-md { --logo-height: 950px; }
+.logo-lg { --logo-height: 110px; }
 .logo-xl { --logo-height: 170px; }
