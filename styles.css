@@ -100,7 +100,7 @@ main {
   height: auto;
   display: block;
   border: 1px solid #eee;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 h1 {
