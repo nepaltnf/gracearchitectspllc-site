@@ -41,7 +41,7 @@ header a {
 }
 
 .logo {
-  height: var(--logo-height, 110px);
+  height: var(--logo-height, 90px);
   width: auto;
   display: block;
   transition: height 0.3s ease;
