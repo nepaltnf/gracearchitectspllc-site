@@ -42,7 +42,7 @@ header a {
 }
 
 .logo {
-  height: 110px; /* adjust up to 130px if desired */
+  height: 110px;
   width: auto;
   display: block;
 }
@@ -78,7 +78,7 @@ nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* GENERIC PAGE LAYOUT (safe defaults) */
+/* PAGE LAYOUT */
 main {
   display: flex;
   justify-content: center;
@@ -86,7 +86,6 @@ main {
 }
 
 .content {
-  max-width: var(--max-width);
   width: 100%;
   text-align: center;
   display: flex;
@@ -117,47 +116,21 @@ footer {
   margin-top: 4rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  header { padding: 0 2rem; }
-  .logo { height: 90px; }
-  nav { gap: 1.5rem; }
-}
+/* ----------------------------
+   CAROUSEL (FULL-WIDTH)
+   ---------------------------- */
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    height: auto;
-    padding: 1.5rem 1rem;
-  }
-
-  .logo { height: 80px; }
-
-  main { padding: 4rem 1.5rem; }
-
-  nav { gap: 1.25rem; }
-}
-
-/* Add these rules to styles.css (keep your existing styles) */
-
-/* Carousel */
 .carousel {
   width: 100%;
-  max-width: none;
   position: relative;
 
-  /* left button | viewport | right button */
   display: grid;
-  grid-template-columns: 44px 1fr 44px;
+  grid-template-columns: 60px 1fr 60px;
   align-items: center;
   gap: 12px;
 
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
-
-.carousel:focus { outline: none; }
 
 .carousel-viewport {
   overflow: hidden;
@@ -173,8 +146,8 @@ footer {
 }
 
 .carousel-slide {
-  flex: 0 0 1040px; /* slide width */
-  opacity: 0.1;
+  flex: 0 0 80%;
+  opacity: 0.2;
   transition: opacity 220ms ease, transform 220ms ease;
 }
 
@@ -202,15 +175,39 @@ footer {
   color: #111;
   display: grid;
   place-items: center;
+  justify-self: center;
 }
 
 .carousel-btn:hover { border-color: #ddd; }
 
-@media (max-width: 1100px) {
-  .carousel-slide { flex-basis: 90vw; }
+@media (max-width: 900px) {
+  header { padding: 0 2rem; }
+  .logo { height: 90px; }
+  nav { gap: 1.5rem; }
+
+  .carousel-slide { flex-basis: 86%; }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .logo { height: 80px; }
+
+  main { padding: 4rem 1.5rem; }
+
+  nav { gap: 1.25rem; }
+
+  .carousel { grid-template-columns: 44px 1fr 44px; }
+  .carousel-slide { flex-basis: 92%; }
 }
 
 @media (max-width: 520px) {
-  /* keep carousel in one row; just hide buttons if you want */
   .carousel-btn { display: none; }
+  .carousel-slide { flex-basis: 94%; }
 }
