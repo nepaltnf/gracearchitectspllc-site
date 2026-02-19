@@ -154,3 +154,12 @@ footer {
 .logo-md { --logo-height: 95px; }
 .logo-lg { --logo-height: 110px; }
 .logo-xl { --logo-height: 170px; }
+
+h1, h2, h3 {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+p {
+  font-weight: 400;
+}
