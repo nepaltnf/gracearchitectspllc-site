@@ -381,3 +381,6 @@ ul.clean li::before{
 @media (max-width:560px){
   .stories-grid{grid-template-columns:1fr;}
 }
+
+.grid-2 aside .section:first-child { margin-top: 0; }
+.card p { margin: 0; }
