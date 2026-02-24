@@ -38,11 +38,14 @@
     }
 
     .stories-grid {
-      margin-top: 2.5rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
+  margin: 2.5rem auto 0;   /* center it */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+
+  max-width: 750px;        /* cap width */
+  width: 100%;             /* responsive until cap */
+}
 
  .story-tile {
   position: relative;
