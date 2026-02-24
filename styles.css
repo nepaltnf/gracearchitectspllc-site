@@ -34,7 +34,7 @@ header{
   top:0;
   z-index:1000;
   background:#fff;
-  border-bottom:0px solid var(--rule);
+  border-bottom:none;
 
   padding:0 3rem;
   display:flex;
