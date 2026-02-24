@@ -45,55 +45,57 @@
     }
 
     .story-tile {
-      position: relative;
-      aspect-ratio: 1 / 1;
-      border: 1px solid #eee;
-      border-radius: 0;
-      overflow: hidden;
-      background: #fafafa;
-      text-decoration: none;
-      color: var(--text);
-      display: block;
-    }
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #eee;
+  border-radius: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
 
     .story-tile img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.01);
-      transition: transform 220ms ease, opacity 220ms ease;
-      opacity: 0.98;
-    }
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 220ms ease, opacity 220ms ease;
+}
 
-    .story-tile::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.55);
-      transition: background 220ms ease;
-    }
+    /* Dark overlay for readability */
+.story-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 220ms ease;
+}
 
-    .story-tile .tile-title {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 1.25rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      z-index: 1;
-    }
+    /* Title */
+.story-tile .tile-title {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  z-index: 1;
+  color: #ffffff;
+}
 
-    .story-tile:hover img {
-      transform: scale(1.05);
-    }
+    /* Hover state: image greys + lightens */
+.story-tile:hover img {
+  filter: grayscale(100%);
+  opacity: 0.55;
+}
 
     .story-tile:hover::after {
-      background: rgba(255, 255, 255, 0.38);
-    }
+  background: rgba(0, 0, 0, 0.15);
+}
 
     @media (max-width: 980px) {
       .stories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
