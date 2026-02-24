@@ -450,3 +450,6 @@ ul.clean li::before{
   color: var(--muted);
   max-width: none;
 }
+.story-lead + .story-lead {
+  margin-top: 1.25rem;
+}
