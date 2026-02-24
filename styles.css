@@ -434,7 +434,7 @@ ul.clean li::before{
   max-width: none;
 }
 .grid-2 .lead {
-  font-size: .5rem;
+  font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: 0;
