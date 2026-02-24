@@ -1,9 +1,8 @@
-<!-- story-1.html (template — duplicate for story-2..story-6 and change content) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shanghai Children's Medical Center — Stories — Grace Architects PLLC</title>
+  <title>Shanghai Children’s — Stories — Grace Architects PLLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,103 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    main { padding: 4rem 2rem; }
-
-    .page {
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 2.5rem;
-      align-items: start;
-    }
-
-     h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
-
-    .lead {
-      margin-top: 0.75rem;
-      color: var(--muted);
-      max-width: none;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .media img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid #eee;
-      border-radius: 12px;
-    }
-
-    /* Lightbox */
-    .lightbox-image {
-      cursor: zoom-in;
-      transition: transform 0.2s ease;
-    }
-    .lightbox-image:hover { transform: scale(1.01); }
-
-    .lightbox-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(255,255,255,0.96);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem;
-      z-index: 2000;
-    }
-    .lightbox-overlay.active { display: flex; }
-
-    .lightbox-overlay img {
-      max-width: 95%;
-      max-height: 90vh;
-      object-fit: contain;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      background: #fff;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 2rem;
-      right: 2.5rem;
-      font-size: 1.75rem;
-      cursor: pointer;
-      color: #111;
-      line-height: 1;
-      user-select: none;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 1.5rem;
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-    }
-    .back:hover { border-bottom-color: var(--text); }
-
-    @media (max-width: 980px) {
-      .grid { grid-template-columns: 1fr; }
-      .lightbox-overlay { padding: 1.5rem; }
-      .lightbox-close { top: 1.25rem; right: 1.25rem; }
-    }
-  </style>
 </head>
-
 <body>
   <header>
     <a href="/index.html">
@@ -122,30 +25,28 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-pad">
     <article class="page">
-      <div class="grid">
+      <div class="grid-2">
         <div>
-          <h1>Shanghai Children's medical center</h1>
+          <h1>Shanghai Children’s</h1>
           <p class="lead">
-The Shanghai Children’s Medical Center began as a 250-bed greenfield hospital with a fully modern surgical suite, advanced diagnostic modalities, and comprehensive MEPC systems. It was the first facility of its kind in Asia and has expanded significantly in the decades since. Ralph led the NBBJ consulting team supporting Project HOPE, collaborating with one of the largest AE firms in China on what was recognized as one of the five most important projects for the Central Government. The facility was completed in under three years.          </p>
-
-
-          <a class="back" href="/stories.html">← Back to Stories</a>
+            The Shanghai Children’s Medical Center began as a 250-bed greenfield hospital with a fully modern surgical suite, advanced diagnostic modalities, and comprehensive MEPC systems. It was the first facility of its kind in Asia and has expanded significantly in the decades since. Ralph led the NBBJ consulting team supporting Project HOPE, collaborating with one of the largest AE firms in China on what was recognized as one of the five most important projects for the Central Government. The facility was completed in under three years.
+          </p>
+          <p style="margin-top:1.5rem;">
+            <a href="/stories.html" style="color:var(--text); text-decoration:none; border-bottom:1px solid transparent;">← Back to Stories</a>
+          </p>
         </div>
 
         <aside class="media">
-          <img src="images/story-3.png" alt="Shanghai Children's medical center" class="lightbox-image">
+          <img src="images/story-3.png" alt="Shanghai Children’s Medical Center exterior" class="lightbox-image">
         </aside>
       </div>
     </article>
   </main>
 
-  <footer>
-    © 2026 Grace Architects PLLC
-  </footer>
+  <footer>© 2026 Grace Architects PLLC</footer>
 
-  <!-- Lightbox overlay -->
   <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
     <span class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</span>
     <img src="" alt="" id="lightbox-img">
