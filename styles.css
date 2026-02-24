@@ -426,3 +426,10 @@ ul.clean li::before{
 .back-link:active {
   color: var(--text);
 }
+/* Story content text */
+.grid-2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: none;
+}
