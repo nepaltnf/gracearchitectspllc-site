@@ -384,3 +384,23 @@ ul.clean li::before{
 
 .grid-2 aside .section:first-child { margin-top: 0; }
 .card p { margin: 0; }
+
+/* Lead spacing when multiple lead paragraphs appear back-to-back */
+.lead + .lead,
+.kicker + .lead,
+.lead + .kicker {
+  margin-top: 1rem;
+}
+
+/* Back link (used on story detail pages) */
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.back-link:hover {
+  border-bottom-color: var(--text);
+}
