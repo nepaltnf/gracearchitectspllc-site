@@ -417,3 +417,12 @@ ul.clean li::before{
 .back-link:hover::after {
   transform: scaleX(1);
 }
+
+/* Back link states */
+.back-link,
+.back-link:link,
+.back-link:visited,
+.back-link:hover,
+.back-link:active {
+  color: var(--text);
+}
