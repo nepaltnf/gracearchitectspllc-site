@@ -1,4 +1,4 @@
-<!-- story-1.html (template — duplicate for story-2..story-6 and change content) -->
+<!-- story-1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,107 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    main { padding: 4rem 2rem; }
-
-    .page {
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 2.5rem;
-      align-items: start;
-    }
-
-     h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
-
-    .lead {
-      margin-top: 0.75rem;
-      color: var(--muted);
-      max-width: none;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .media img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid #eee;
-      border-radius: 0px;
-    }
-
-    /* Lightbox */
-    .lightbox-image {
-      cursor: zoom-in;
-      transition: transform 0.2s ease;
-    }
-    .lightbox-image:hover { transform: scale(1.01); }
-
-    .lightbox-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(255,255,255,0.96);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem;
-      z-index: 2000;
-    }
-    .lightbox-overlay.active { display: flex; }
-
-    .lightbox-overlay img {
-      max-width: 95%;
-      max-height: 90vh;
-      object-fit: contain;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      background: #fff;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 2rem;
-      right: 2.5rem;
-      font-size: 1.75rem;
-      cursor: pointer;
-      color: #111;
-      line-height: 1;
-      user-select: none;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 1.5rem;
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-    }
-    .back:hover { border-bottom-color: var(--text); }
-
-    @media (max-width: 980px) {
-      .grid { grid-template-columns: 1fr; }
-      .lightbox-overlay { padding: 1.5rem; }
-      .lightbox-close { top: 1.25rem; right: 1.25rem; }
-    }
-  </style>
 </head>
-
 <body>
   <header>
     <a href="/index.html">
-       <img src="images/grace_study3-3a.png" alt="Grace Architects PLLC" class="logo logo-sm">
+      <img src="images/grace_study3-3a.png" alt="Grace Architects PLLC" class="logo logo-sm">
     </a>
 
     <nav>
@@ -122,34 +26,32 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-pad">
     <article class="page">
-      <div class="grid">
+      <div class="grid-2">
         <div>
           <h1>9th &amp; Alder</h1>
           <p class="lead">
-            The 9th&Alder Behavioral Health Tower is a concept study designed to maximize the site’s allowable envelope while accommodating the Behavioral Health program and additional Harborview Hospital functions. A functional architectural concept arose, allowing for a large south facing roof deck available to patient and staff alike.
+            The 9th &amp; Alder Behavioral Health Tower is a concept study designed to maximize the site’s allowable envelope while accommodating the Behavioral Health program and additional Harborview Hospital functions. The resulting architectural strategy integrates efficiency with clarity, including a generous south-facing roof deck accessible to both patients and staff.
           </p>
-
           <p class="lead" style="margin-top: 1rem;">
-           Ralph led the building core planning and developed the project’s Revit model while at TGB Architects.
+            Ralph led the building core planning and developed the project’s Revit model while at TGB Architects.
           </p>
 
-          <a class="back" href="/stories.html">← Back to Stories</a>
+          <p style="margin-top: 1.5rem;">
+            <a href="/stories.html" style="color: var(--text); text-decoration: none; border-bottom: 1px solid transparent;">← Back to Stories</a>
+          </p>
         </div>
 
         <aside class="media">
-          <img src="images/Street-view.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" class="lightbox-image">
+          <img src="images/story-1.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" class="lightbox-image">
         </aside>
       </div>
     </article>
   </main>
 
-  <footer>
-    © 2026 Grace Architects PLLC
-  </footer>
+  <footer>© 2026 Grace Architects PLLC</footer>
 
-  <!-- Lightbox overlay -->
   <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
     <span class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</span>
     <img src="" alt="" id="lightbox-img">
