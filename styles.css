@@ -433,3 +433,11 @@ ul.clean li::before{
   color: var(--muted);
   max-width: none;
 }
+.grid-2 .lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--muted);
+  max-width: none;
+}
