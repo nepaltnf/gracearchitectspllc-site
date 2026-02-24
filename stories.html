@@ -1,4 +1,3 @@
-<!-- stories.html (landing page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,110 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    main {
-  display: block;      /* override global flex */
-  padding: 2rem;       /* equal padding on all 4 sides */
-}
-
-    .page {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .page h1 {
-      margin: 0;
-      font-size: 2.25rem;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
-
-    .lead {
-      margin-top: 0.75rem;
-      color: var(--muted);
-      max-width: 900px;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .stories-grid {
-  margin: 2.5rem auto 0;   /* center it */
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-
-  max-width: 750px;        /* cap width */
-  width: 100%;             /* responsive until cap */
-}
-
- .story-tile {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border: 1px solid #eee;
-  border-radius: 0;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-
-.story-tile img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* Black & white by default */
-  filter: grayscale(100%);
-  transition: filter 300ms ease, transform 300ms ease;
-}
-
-/* Dark overlay for white title legibility */
-.story-tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  transition: background 300ms ease;
-}
-
-.story-tile .tile-title {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  z-index: 1;
-  color: #ffffff;
-}
-
-/* Hover = full color */
-.story-tile:hover img {
-  filter: grayscale(25%);
-  transform: scale(1.03);
-}
-
-.story-tile:hover::after {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-    @media (max-width: 950px) {
-      .stories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 560px) {
-      .stories-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
-
 <body>
   <header>
     <a href="/index.html">
@@ -123,52 +19,51 @@
 
     <nav>
       <a href="/index.html">About</a>
-       <a href="/stories.html">Stories</a>
+      <a href="/stories.html">Stories</a>
       <a href="/resume.html">Resume</a>
       <a href="mailto:rwallen@gracearchitectspllc.com">Contact</a>
     </nav>
   </header>
 
-  <main>
-    
+  <main class="main-pad">
+    <article class="page">
+      <h1>Stories</h1>
+      <p class="lead">Select a story.</p>
 
       <section class="stories-grid" aria-label="Stories grid">
-        <!-- 6 tiles (replace images + titles as needed) -->
         <a class="story-tile" href="/story-1.html">
-          <img src="images/story-1.png" alt="Story 1 cover image">
+          <img src="images/story-1.png" alt="9th & Alder cover">
           <div class="tile-title">9th &amp; Alder</div>
         </a>
 
         <a class="story-tile" href="/story-2.html">
-          <img src="images/story-2.png" alt="Story 2 cover image">
+          <img src="images/story-2.png" alt="Western State TRC cover">
           <div class="tile-title">Western State TRC</div>
         </a>
 
         <a class="story-tile" href="/story-3.html">
-          <img src="images/story-3.png" alt="Story 3 cover image">
+          <img src="images/story-3.png" alt="Shanghai Children’s cover">
           <div class="tile-title">Shanghai Children’s</div>
         </a>
 
         <a class="story-tile" href="/story-4.html">
-          <img src="images/story-4.png" alt="Story 4 cover image">
+          <img src="images/story-4.png" alt="Two Union Square cover">
           <div class="tile-title">Two Union Square</div>
         </a>
 
         <a class="story-tile" href="/story-5.html">
-          <img src="images/story-5.png" alt="Story 5 cover image">
+          <img src="images/story-5.png" alt="1101 Westlake cover">
           <div class="tile-title">1101 Westlake</div>
         </a>
 
         <a class="story-tile" href="/story-6.html">
-          <img src="images/story-6.png" alt="Story 6 cover image">
+          <img src="images/story-6.png" alt="Surmang Clinic cover">
           <div class="tile-title">Surmang Clinic</div>
         </a>
       </section>
     </article>
   </main>
 
-  <footer>
-    © 2026 Grace Architects PLLC
-  </footer>
+  <footer>© 2026 Grace Architects PLLC</footer>
 </body>
 </html>
