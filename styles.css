@@ -534,21 +534,35 @@ ul.clean li::before{
 }
 
 /* ---------- Contact Layout ---------- */
+/* ---------- Contact Page ---------- */
 
 .contact-centered {
   text-align: center;
 }
 
 .contact-centered .hero-image {
-  margin-bottom: 2rem;
-}
-
-.contact-centered h1 {
-  margin-bottom: 1.5rem;
-}
-
-.contact-centered .hero-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+/* Contact Information Block */
+.contact-group {
+  margin-top: 2rem;        /* space below h1 */
+}
+
+.contact-group p {
+  margin: 0;               /* remove default paragraph spacing */
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.contact-group p + p {
+  margin-top: 0.35rem;     /* “single-spaced” feel */
+}
+
+.contact-name {
+  font-weight: 500;
+  color: var(--text);
 }
