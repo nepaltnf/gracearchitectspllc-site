@@ -546,3 +546,9 @@ ul.clean li::before{
 .contact-centered h1 {
   margin-bottom: 1.5rem;
 }
+
+.contact-centered .hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
