@@ -547,10 +547,14 @@ ul.clean li::before{
   margin-bottom: 2rem;
 }
 
-/* Contact Information Block */
+/* Contact block: keep it centered as a block */
 .contact-group {
-  margin-top: 2rem;        /* space below h1 */
+  margin: 2rem auto 0;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
 }
+ /* space below h1 */
 
 .contact-group p {
   margin: 0;               /* remove default paragraph spacing */
