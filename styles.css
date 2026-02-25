@@ -593,7 +593,7 @@ ul.clean li::before{
 /* Contact: force tight single-spaced stack */
 .contact-group p {
   margin: 0 !important;
-  line-height: 1.25 !important;
+  line-height: 1.5 !important;
 }
 
 .contact-group p + p {
