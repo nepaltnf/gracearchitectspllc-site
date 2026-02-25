@@ -572,3 +572,7 @@ ul.clean li::before{
   font-weight: 500;
   color: var(--text);
 }
+
+.contact-centered .hero-image {
+  border: none;
+}
