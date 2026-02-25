@@ -589,3 +589,25 @@ ul.clean li::before{
 .contact-group p + p {
   margin-top: -0.5rem;
 }
+
+/* Contact: force tight single-spaced stack */
+.contact-group p {
+  margin: 0 !important;
+  line-height: 1.15 !important;
+}
+
+.contact-group p + p {
+  margin-top: 0.2rem !important;
+}
+
+/* Contact: neutralize back-link spacing + inline-block behavior */
+.contact-group a.back-link {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Keep underline behavior but don’t push spacing */
+.contact-group a.back-link::after {
+  bottom: -2px;
+}
