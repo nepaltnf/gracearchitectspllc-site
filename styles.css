@@ -576,3 +576,16 @@ ul.clean li::before{
 .contact-centered .hero-image {
   border: none;
 }
+/* Contact: prevent .back-link from adding extra vertical spacing */
+.contact-group .back-link {
+  margin-top: 0; /* overrides the global back-link margin */
+}
+
+/* Contact: single-spaced grouping */
+.contact-group p {
+  line-height: 1.25;
+}
+
+.contact-group p + p {
+  margin-top: 0.2rem;
+}
