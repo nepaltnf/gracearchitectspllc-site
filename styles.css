@@ -560,7 +560,7 @@ ul.clean li::before{
 
 .contact-group p {
   margin: 0;
-  line-height: 1;   /* 1.0 is too tight and looks mis-registered */
+  line-height: 1.0;   /* 1.0 is too tight and looks mis-registered */
   color: var(--muted);
 }
 
