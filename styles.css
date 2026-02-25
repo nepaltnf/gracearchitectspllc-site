@@ -559,7 +559,7 @@ ul.clean li::before{
 }
 
 .contact-group p + p {
-  margin-top: 0.35rem;     /* “single-spaced” feel */
+  margin-top: 0.25rem;     /* “single-spaced” feel */
 }
 
 .contact-name {
