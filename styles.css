@@ -611,3 +611,8 @@ ul.clean li::before{
 .contact-group a.back-link::after {
   bottom: -2px;
 }
+
+/* Contact page: tighten space below h1 */
+.contact-centered h1 {
+  margin-bottom: 1rem;
+}
