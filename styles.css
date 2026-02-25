@@ -614,5 +614,5 @@ ul.clean li::before{
 
 /* Contact page: tighten space below h1 */
 .contact-centered h1 {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem !important;
 }
