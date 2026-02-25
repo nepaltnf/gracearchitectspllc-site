@@ -554,7 +554,7 @@ ul.clean li::before{
 
 .contact-group p {
   margin: 0;               /* remove default paragraph spacing */
-  line-height: 1.6;
+  line-height: 1.0;
   color: var(--muted);
 }
 
