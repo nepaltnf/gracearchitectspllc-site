@@ -587,5 +587,5 @@ ul.clean li::before{
 }
 
 .contact-group p + p {
-  margin-top: 0.2rem;
+  margin-top: -0.5rem;
 }
