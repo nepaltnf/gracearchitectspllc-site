@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Surmang Clinic — Stories — Grace Architects PLLC</title>
+  <title>9th &amp; Alder — Stories — Grace Architects PLLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,6 +16,7 @@
     <a href="/index.html">
       <img src="images/grace_study3-3a.png" alt="Grace Architects PLLC" class="logo logo-sm">
     </a>
+
     <nav>
       <a href="/index.html">About</a>
       <a href="/stories.html">Stories</a>
@@ -28,7 +31,7 @@
         <div>
           <h1>Surmang Clinic</h1>
 
-           <p class="story-lead">
+          <p class="story-lead">
             The Surmang Foundation has been a long-standing commitment of Ralph’s. The current clinic design refines earlier full-campus concepts into a focused two-exam-room facility supporting the two Tibetan physicians on staff. Care is provided free of charge, and the clinic serves a broad catchment area of rural villages, accommodating more than 20,000 patient visits annually. Ongoing efforts support both construction of the new facility and continued operational funding.
           </p>
 
@@ -36,7 +39,10 @@
         </div>
 
         <aside class="media">
-          <img src="images/story-6.png" alt="Surmang Foundation rural clinic design" class="lightbox-image">
+          <!-- Click opens carousel (with all images) -->
+          <a href="#" data-lightbox-index="0" aria-label="Open image gallery">
+            <img src="images/story-6.png" alt="9th &amp; Alder Behavior Health Tower concept rendering" class="lightbox-image">
+          </a>
         </aside>
       </div>
     </article>
@@ -44,44 +50,34 @@
 
   <footer>© 2026 Grace Architects PLLC</footer>
 
+  <!-- Carousel Lightbox (Story 1) -->
   <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
     <span class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</span>
-    <img src="" alt="" id="lightbox-img">
+
+    <div class="lightbox-content" role="dialog" aria-label="Image gallery">
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+
+      <div class="lightbox-viewport">
+        <div class="lightbox-track">
+          <div class="lightbox-slide">
+            <img src="images/story-6.png" alt="9th &amp; Alder concept rendering">
+          </div>
+          <div class="lightbox-slide">
+            <img src="images/story-6b.png" alt="9th &amp; Alder image 2">
+          </div>
+          <div class="lightbox-slide">
+            <img src="images/story-6c.png" alt="9th &amp; Alder image 3">
+          </div>
+          <div class="lightbox-slide">
+            <img src="images/story-6d.png" alt="9th &amp; Alder image 4">
+          </div>
+        </div>
+      </div>
+
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+    </div>
   </div>
 
-  <script>
-    const overlay = document.getElementById("lightbox");
-    const overlayImg = document.getElementById("lightbox-img");
-    const closeBtn = document.getElementById("lightbox-close");
-
-    function openLightbox(src, alt) {
-      overlayImg.src = src;
-      overlayImg.alt = alt || "";
-      overlay.classList.add("active");
-      overlay.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeLightbox() {
-      overlay.classList.remove("active");
-      overlay.setAttribute("aria-hidden", "true");
-      overlayImg.src = "";
-      document.body.style.overflow = "";
-    }
-
-    document.querySelectorAll(".lightbox-image").forEach(img => {
-      img.addEventListener("click", () => openLightbox(img.src, img.alt));
-    });
-
-    closeBtn.addEventListener("click", closeLightbox);
-
-    overlay.addEventListener("click", e => {
-      if (e.target === overlay) closeLightbox();
-    });
-
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape" && overlay.classList.contains("active")) closeLightbox();
-    });
-  </script>
+  <script src="/lightbox.js"></script>
 </body>
 </html>
